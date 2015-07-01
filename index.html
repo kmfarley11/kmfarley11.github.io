@@ -1,35 +1,44 @@
 <html>
 <link rel="stylesheet" type="text/css" href="Site.css">
 
-<div ng-app="">
+<div ng-app ng-controller="EPorfolioController">
 	<header class="top-container">
-		<h1 id="heading">Kevin Farley: Computer Engineer</h1>
+		<p>
+			<h1 id="heading">Kevin Farley: Computer Engineer</h1>
+			<img id="myFace" src="./Resources/gitpic.jpg"></img>
+		</p>
 		<div class="container">
 			<ul id="menu">
-				 <li><a href="/about">About</a></li>
-				 <li><a href="/index" class="active-link">Home</a>
-				 <li><a href="/contact">Contact</a></li>
+				 <li><a href="#" ng-click="newSelection($event)" link='about'>About</a></li>
+				 <li><a href="#" ng-click="newSelection($event)" link='home'>Home</a>
+				 <li><a href="#" ng-click="newSelection($event)" link='contact'>Contact</a></li>
 			</ul>
 		</div>
 	</header>
-	
 	<body>
+		<p>
 		<div class="main-content">
-			<div class="todolist" style="text-align:center">
-				<p>This site is still under development</p>
-				<b>ToDo:</b>
-				<br>
-				<p style="display:inline-block">
-					<s>Get Basic Design Drawn Up</s>
+			<!-- home view -->
+			<div class="fadeIn" ng-class="{ hidden: selected != 'home' }">
+				<div class="todolist" style="text-align:center">
+					<p>This site is still under development</p>
+					<b>ToDo:</b>
 					<br>
-					Get all pages laid out
-					<br>
-					Make it look fresh
-					<br>
-					Fill out content
-				</p>
-				<!-- use angular to shift pages... -->
-				<div id="contactInfo" ng-show="">
+					<p style="display:inline-block">
+						<s>Get Basic Design Drawn Up</s>
+						<br>
+						<s>Get all pages laid out</s>
+						<br>
+						<s>Make it look</s> fresh *: not completely finished
+						<br>
+						Fill out content
+					</p>
+				</div>
+			</div>
+			
+			<!-- contact view -->
+			<div id="contactInfo" class="fadeIn" ng-class="{ hidden: selected != 'contact' }">
+				<p>
 					Contact Info: <br>
 					Phone Number: 937-430-7356 <br>
 					Email: kmfarley11@gmail.com <br>
@@ -39,19 +48,29 @@
 						Zip: 45458 <br>
 						City/State: Centerville, Ohio <br>
 					</p>
-				</div>
-				
-				
+				</p>
+			</div>
+			
+			<!-- about view -->
+			<div id="aboutInfo" class="fadeIn" ng-class="{ hidden: selected != 'about' }">
+				<p>
+					My name is Kevin Farley and I am a Computer Engineering student from the University of Cincinnati
+					<br><br>
+					This site has been created and maintained by myself.
+					<br><br>
+					<a href="./Resources/Resume.docx" download>Download My Resume</a>
+				</p>
 			</div>
 		</div>
+		</p>
 	</body>
-	
-	<footer>
-		<p>Created by Kevin Farley: hosted by github pages, latest update: 6/30/2015</p>
-	</footer>
 </div>
 
+<footer>
+	<p>Created by Kevin Farley: hosted by github pages, latest update: 6/30/2015</p>
+</footer>
+
 <script type="text/javascript" src="./Sources/jquery-1.11.3.min.js"></script>
-<script src="./Sources/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 <script type="text/javascript" src="./Sources/site.js"></script>
 </html>

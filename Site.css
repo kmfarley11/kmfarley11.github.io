@@ -1,7 +1,17 @@
-/*.active-link{
-    pointer-events: none;
-    cursor: default;
-}*/
+.fadeIn { 
+    transition: 1s ease-in-out opacity; 
+    opacity: 1; 
+    overflow: hidden; 
+    height: auto;
+    position:relative;
+}
+
+.fadeIn.hidden { 
+    opacity: 0; 
+    height: 0; 
+    overflow: hidden;
+    position:relative;
+}
 
 .container{
     text-align: center;
@@ -10,6 +20,8 @@
 }
 
 .main-content{
+    position:relative;
+    margin-top:10px;
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -18,6 +30,11 @@
     color: black;
     width:91%;
     border-radius:32px;
+    
+	/* Set our transitions up. */
+	-webkit-transition: 3s;
+	-moz-transition: 3s;
+	transition: 3s;
 }
 
 #heading{
@@ -51,6 +68,17 @@
     border-radius:75px;
 }
 
+#myFace {
+    border-radius:50%;
+    height: auto; 
+    width: auto; 
+    max-width: 150px; 
+    max-height: 150px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
 #menu li a {
     width:75px;
     padding: 3px 3px 3px 3px;
@@ -64,6 +92,10 @@
 #menu li a:hover {
     color:white;
     background-color:rgba(150,150,150,0.5);
+}
+
+#contactView #aboutView {
+    display: hidden;
 }
 
 html {
@@ -84,6 +116,7 @@ html {
 }
 
 footer {
+    position:relative;
     color:#ddd;
     text-align:center
 }
