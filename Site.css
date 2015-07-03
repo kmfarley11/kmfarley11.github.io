@@ -13,6 +13,10 @@
     position:relative;
 }
 
+.centered-text {
+    text-align:center;
+}
+
 .container{
     text-align: center;
     width: auto;
@@ -25,16 +29,16 @@
     display:block;
     margin-left:auto;
     margin-right:auto;
-    text-align:center;
+    text-align:left;
     background-color: rgba(250,250,250,0.5);
     color: black;
     width:91%;
     border-radius:32px;
-    
-	/* Set our transitions up. */
-	-webkit-transition: 3s;
-	-moz-transition: 3s;
-	transition: 3s;
+}
+
+.views {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #heading{
@@ -94,8 +98,12 @@
     background-color:rgba(150,150,150,0.5);
 }
 
-#contactView #aboutView {
-    display: hidden;
+#contactView {
+    width:42%;
+}
+
+#homeView {
+    width:42%;
 }
 
 html {
@@ -119,4 +127,30 @@ footer {
     position:relative;
     color:#ddd;
     text-align:center
+}
+
+.separator{
+    display: block;
+    border:1px;
+    border-style:solid;
+}
+
+.light-separator{
+    display: block;
+    border:1px;
+    border-style:solid;
+    border-color:grey;
+}
+
+.resume-links {
+    width:33%;
+}
+
+.about-paragraphs {
+    width:41%;
+}
+
+.centered-div {
+    margin-left:auto;
+    margin-right:auto;
 }
