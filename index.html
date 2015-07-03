@@ -1,7 +1,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="Site.css">
 
-<div ng-app ng-controller="EPorfolioController">
+<div ng-app="myEfolio" ng-controller="EPorfolioController">
 	<header class="top-container">
 		<p>
 			<h1 id="heading">Kevin Farley: Computer Engineer</h1>
@@ -17,51 +17,11 @@
 	</header>
 	<body>
 		<p>
-		<div class="main-content">
-			<!-- home view -->
-			<div class="fadeIn" ng-class="{ hidden: selected != 'home' }">
-				<div class="todolist" style="text-align:center">
-					<p>This site is still under development</p>
-					<b>ToDo:</b>
-					<br>
-					<p style="display:inline-block">
-						<s>Get Basic Design Drawn Up</s>
-						<br>
-						<s>Get all pages laid out</s>
-						<br>
-						<s>Make it look</s> fresh *: not completely finished
-						<br>
-						Fill out content
-					</p>
-				</div>
+			<div class="main-content">
+				<div home-view class="fadeIn" ng-class="{ hidden: selected != 'home' }"></div>
+				<div contact-view class="fadeIn" ng-class="{ hidden: selected != 'contact' }"></div>
+				<div about-view class="fadeIn" ng-class="{ hidden: selected != 'about' }"></div>
 			</div>
-			
-			<!-- contact view -->
-			<div id="contactInfo" class="fadeIn" ng-class="{ hidden: selected != 'contact' }">
-				<p>
-					Contact Info: <br>
-					Phone Number: 937-430-7356 <br>
-					Email: kmfarley11@gmail.com <br>
-					<p style="display: block">
-						Address: <br>
-						Street: 10033 Settlement House Road <br>
-						Zip: 45458 <br>
-						City/State: Centerville, Ohio <br>
-					</p>
-				</p>
-			</div>
-			
-			<!-- about view -->
-			<div id="aboutInfo" class="fadeIn" ng-class="{ hidden: selected != 'about' }">
-				<p>
-					My name is Kevin Farley and I am a Computer Engineering student from the University of Cincinnati
-					<br><br>
-					This site has been created and maintained by myself.
-					<br><br>
-					<a href="./Resources/Resume.docx" download>Download My Resume</a>
-				</p>
-			</div>
-		</div>
 		</p>
 	</body>
 </div>

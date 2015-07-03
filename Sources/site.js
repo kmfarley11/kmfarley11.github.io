@@ -1,15 +1,34 @@
-// The controller is a regular JavaScript function. It is called
-// once when AngularJS runs into the ng-controller declaration.
-
-function EPorfolioController($scope){
-	
-	$scope.showtooltip = false;
-	$scope.value = 'Edit me.';
+// set up angular module
+angular.module('myEfolio',[])
+.controller('EPorfolioController', ['$scope', function ($scope){
+	// available vals / functions for views
 	$scope.selected = 'home';
-	
 	$scope.newSelection = function(e){
 		var selection = e.originalEvent.currentTarget.attributes.link;
-		if(selection)
 			$scope.selected = selection.value;
 	};
-}
+}])
+// custom directive(s) to template html separately
+	// using the Url like the following requires some sort of hosting 
+	// 	(cannot just open files in browser)
+	// run python -m http.server in app folder to work properly locally
+.directive('myView', function() {
+	return {
+		template: 'View: {{selected}}'
+	};
+})
+.directive('homeView', function() {
+	return {
+		templateUrl: 'Views/home.html'
+	};
+})
+.directive('aboutView', function() {
+	return {
+		templateUrl: 'Views/about.html'
+	};
+})
+.directive('contactView', function() {
+	return {
+		templateUrl: 'Views/contact.html'
+	};
+});
