@@ -72,7 +72,7 @@
     border-radius:75px;
 }
 
-#myFace {
+.circle-image {
     border-radius:50%;
     height: auto; 
     width: auto; 
@@ -159,4 +159,10 @@ footer {
     width:65%;
     margin-left:25%;
     margin-right:50px;
+}
+
+.my-images {
+    float:left;
+    list-style:none;
+    margin-left:75px;
 }
