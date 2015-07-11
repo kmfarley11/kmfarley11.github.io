@@ -70,6 +70,7 @@
 #menu li {
     float: left;
     border-radius:75px;
+    padding-right: 7px;
 }
 
 .circle-image {
