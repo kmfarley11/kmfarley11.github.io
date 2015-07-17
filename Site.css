@@ -145,6 +145,7 @@ footer {
 
 .resume-links {
     /*width:33%; For view / download*/
+    text-align:center;
     width: 39%; /* For all three as pdfs */
 }
 
