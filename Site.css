@@ -93,7 +93,12 @@
     color:#777;
     border-radius: 75px;
     font-weight:bold;
-}   
+}
+
+li a.active-link {
+  color: white !important;
+  pointer-events: none;
+}
 
 #menu li a:hover {
     color:white;

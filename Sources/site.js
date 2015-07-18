@@ -5,7 +5,9 @@ angular.module('myEfolio',[])
 	$scope.selected = 'home';
 	$scope.newSelection = function(e){
 		var selection = e.originalEvent.currentTarget.attributes.link;
-			$scope.selected = selection.value;
+		$scope.selected = selection.value;
+		$(".active-link").removeClass("active-link");
+		$(e.originalEvent.currentTarget).addClass("active-link");
 	};
 }])
 // custom directive(s) to template html separately
