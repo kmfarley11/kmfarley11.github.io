@@ -10,7 +10,7 @@ angular.module('myEfolio',[])
 }])
 // custom directive(s) to template html separately
 	// using the Url like the following requires some sort of hosting 
-	// 	(cannot just open files in browser)
+	// 	(cannot just open project/ html files in browser)
 	// run python -m http.server in app folder to work properly locally
 .directive('myView', function() {
 	return {
@@ -23,8 +23,12 @@ angular.module('myEfolio',[])
 	};
 })
 .directive('aboutView', function() {
+	var url = 'Views/about.html';
+	// set template to load different content if browsing on a mobile platform
+	if(/Chrome|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+		url = 'Views/about-mobile.html';
 	return {
-		templateUrl: 'Views/about.html'
+		templateUrl: url
 	};
 })
 .directive('contactView', function() {
