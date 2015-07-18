@@ -25,7 +25,7 @@ angular.module('myEfolio',[])
 .directive('aboutView', function() {
 	var url = 'Views/about.html';
 	// set template to load different content if browsing on a mobile platform
-	if(/Chrome|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+	if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 		url = 'Views/about-mobile.html';
 	return {
 		templateUrl: url
