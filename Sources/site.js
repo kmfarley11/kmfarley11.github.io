@@ -13,7 +13,7 @@ angular.module('myEfolio',[])
 // custom directive(s) to template html separately
 	// using the Url like the following requires some sort of hosting 
 	// 	(cannot just open project/ html files in browser)
-	// run python -m http.server 8000 --bind 127.0.0.1 in app folder to work properly locally
+	// run "python -m http.server 8000 --bind 127.0.0.1" in app folder to work properly locally
 .directive('myView', function() {
 	return {
 		template: 'View: {{selected}}'
