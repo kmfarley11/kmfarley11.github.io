@@ -30,7 +30,6 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  /* background-color: rgba(250,250,250,0.5); */
   background-color: darkgray;
   color: black;
   width: 91%;
@@ -43,7 +42,6 @@
 }
 
 #heading {
-  /* text-shadow: 3px 3px rgba(22, 22, 70, 0.75); */
   color: lightgrey;
   text-align: center;
   font-weight: bold;
@@ -56,10 +54,10 @@
   list-style: none;
   padding: 0 0 0 0;
   border-radius: 5vw;
-  margin-top: 1%;
-
+  width: auto;
+  flex: 1;
+  margin-top: 2vw;
   background-color: darkgray;
-  /* background-color: cyan; */
 }
 
 #menu li {
@@ -68,19 +66,8 @@
   padding-right: 7px;
 }
 
-.circle-image {
-  border-radius: 50%;
-  height: auto;
-  width: auto;
-  max-width: 150px;
-  max-height: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 #menu li a {
-  width: 75px;
+  width: 5vw;
   padding: 5px 5px 5px 5px;
   flex-basis: 1;
   display: block;
@@ -96,34 +83,66 @@ li a.active-link {
 
 #menu li a:hover {
   color: white;
-  /*background-color:rgba(150,150,150,0.5);*/
 }
 
 #contactView {
-  width: 42%;
+  width: 45vw;
 }
 
 #homeView {
-  width: 42%;
+  width: 45vw;
 }
 
 html {
   background-color: black;
-  /* background-color: navy; */
-
   background-size: cover;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
     AppleGothic, sans-serif;
-  font-size: 1.1vw;
+  font-size: 1.25vw;
   font-style: normal;
   font-variant: normal;
   line-height: 2vw;
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+
+    .col-img {
+      visibility: hidden;
+      display: none;
+    }
+
+    #menu li a {
+      width: 10vw;
+    }
+
+    #contactView {
+      width: 90%;
+    }
+
+    #homeView {
+      width: 90%;
+    }
 }
 
 footer {
   position: relative;
   color: #ddd;
   text-align: center;
+}
+
+.circle-image {
+  border-radius: 50%;
+  height: auto;
+  width: auto;
+  max-width: 10vw;
+  max-height: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .separator {
@@ -140,9 +159,7 @@ footer {
 }
 
 .resume-links {
-  /*width:33%; For view / download*/
   text-align: center;
-  width: 41%; /* For all three as pdfs */
 }
 
 .about-paragraphs {
