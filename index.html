@@ -1,36 +1,45 @@
+<!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="Site.css">
 
 <div ng-app="myEfolio" ng-controller="EPorfolioController">
 	<header class="top-container">
-		<p>
-			<h1 id="heading">Kevin Farley: Computer Engineer</h1>
-			<img class="circle-image" src="./Resources/gitpic.jpg"></img>
-		</p>
+		<div>
+			<h1 id="heading">Kevin Farley</h1>
+			<h2 id="heading">MS Computer Science | BS Computer Engineering</h2>
+			<img class="circle-image" src="./Resources/gitpic.jpg" />
+		</div>
 		<div class="container">
-			<ul id="menu">
-				 <li><a href="#" ng-click="newSelection($event)" link='about'>About</a></li>
-				 <li><a href="#" ng-click="newSelection($event)" link='home' class='active-link'>Home</a>
-				 <li><a href="#" ng-click="newSelection($event)" link='contact'>Contact</a></li>
+			<ul id="menu" class="flex-grid">
+				<li class="col"><a href="#" ng-click="newSelection($event)" link='about'>About</a></li>
+				<li class="col"><a href="#" ng-click="newSelection($event)" link='home' class='active-link'>Home</a></li>
+				<li class="col"><a href="#" ng-click="newSelection($event)" link='contact'>Contact</a></li>
 			</ul>
 		</div>
 	</header>
 	<body>
-		<p>
+		<div>
 			<div class="main-content">
 				<div home-view class="fadeIn" ng-class="{ hidden: selected != 'home' }"></div>
 				<div contact-view class="fadeIn" ng-class="{ hidden: selected != 'contact' }"></div>
 				<div about-view class="fadeIn" ng-class="{ hidden: selected != 'about' }"></div>
 			</div>
-		</p>
+		</div>
 	</body>
 </div>
 
 <footer>
-	<p>Created by Kevin Farley: hosted by github pages, latest update: 9/15/2016</p>
+	<p>Created by Kevin Farley: hosted by github pages, powered by
+		<a
+			href="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"
+			title="Someday i'll shift to vanilla or v2 etc. but v1 is easiest for static atm 🤷"
+			style="color:lightskyblue"
+			>Angular v1.8.3</a>
+		, latest update: 5/15/2025
+	</p>
 </footer>
 
 <script type="text/javascript" src="./Sources/jquery-1.11.3.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script type="text/javascript" src="./Sources/angular-1.8.3.min.js"></script>
 <script type="text/javascript" src="./Sources/site.js"></script>
 </html>

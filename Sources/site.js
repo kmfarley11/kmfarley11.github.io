@@ -7,6 +7,7 @@ angular.module('myEfolio',[])
 		var selection = e.originalEvent.currentTarget.attributes.link;
 		$scope.selected = selection.value;
 		$(".active-link").removeClass("active-link");
+		// TODO: if hyper link selected instead of button, this doesn't do what we want
 		$(e.originalEvent.currentTarget).addClass("active-link");
 	};
 }])
